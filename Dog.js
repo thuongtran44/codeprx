@@ -1,11 +1,13 @@
-function Dog() {
-	this.name = 'Dog';
+var chalk = require('chalk');
+function Dog(name) {
+	this.name = name;
 	this.stomach = [];
 }
-Dog.prototype.eat= function(cat) {
-	this.stomach = push(cat);
+Dog.prototype.eat = function(cat) {
+	this.stomach.push(cat);
 };
-Dog.prototype.msayHi= function() {
-	console.log('Hi, i am dog. My name is'+ Chalk.red(this.name));
-}
+Dog.prototype.sayHi = function() {
+	console.log('Hi, i am dog. My name is ' + chalk.blue(this.name));
+};
+
 module.exports = Dog;
